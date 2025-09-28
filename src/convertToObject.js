@@ -16,14 +16,14 @@ function convertToObject(sourceString) {
     resSourceString.push(value);
   }
 
-  const styles = resSourceString.reduce((acc, currentValue, index, item) => {
+  const styles = resSourceString.reduce((accum, currentValue, index, item) => {
     if (index % 2 === 0) {
-      acc._key = currentValue;
+      accum._key = currentValue;
     } else {
-      acc[acc._key] = currentValue;
+      accum[accum._key] = currentValue;
     }
 
-    return acc;
+    return accum;
   }, {});
 
   return styles;
